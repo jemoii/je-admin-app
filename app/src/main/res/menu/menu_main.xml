@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="me.voler.wireless.administrator.MainActivity">
+    <item
+        android:id="@+id/action_login"
+        android:title="@string/action_login"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_qrcode"
+        android:title="@string/action_qrcode"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_copyright"
+        android:title="@string/action_copyright"
+        app:showAsAction="never" />
+</menu>
