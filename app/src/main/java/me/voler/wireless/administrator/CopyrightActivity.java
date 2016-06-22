@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,7 +34,7 @@ public class CopyrightActivity extends AppCompatActivity {
                 // Start an activity if it's safe
                 if (isIntentSafe) {
                     // Create and start the chooser
-                    Intent chooser = Intent.createChooser(intent, getString(R.string.tip_choose_browswr));
+                    Intent chooser = Intent.createChooser(intent, getString(R.string.tip_choose_browser));
                     startActivity(chooser);
                 }
 //              Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)

@@ -1,12 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/space"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SpaceActivity">
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="me.voler.wireless.administrator.EditActivity">
+
+    <!-- edit progress -->
+    <ProgressBar
+        android:id="@+id/edit_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+    <!--Completely hidden, as if the view had not been added.-->
 
     <ScrollView
+        android:id="@+id/edit_form"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -31,8 +46,8 @@
                     android:text="@string/label_space_nickname"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/info_nickname"
+                <EditText
+                    android:id="@+id/edit_nickname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/primary_text_size" />
@@ -53,7 +68,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/info_username"
+                    android:id="@+id/edit_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/primary_text_size" />
@@ -74,28 +89,14 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/info_telephone"
+                    android:id="@+id/edit_telephone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/primary_text_size" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp">
-
-                <Button
-                    android:id="@+id/logout_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#F44336"
-                    android:text="@string/action_logout"
-                    android:textColor="#FFFFFF" />
             </LinearLayout>
 
         </LinearLayout>
 
     </ScrollView>
 
-</android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

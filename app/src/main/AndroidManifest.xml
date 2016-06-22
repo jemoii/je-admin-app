@@ -58,6 +58,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="me.voler.wireless.administrator.MainActivity" />
         </activity>
+        <activity
+            android:name=".EditActivity"
+            android:label="@string/title_activity_edit"
+            android:parentActivityName=".SpaceActivity"
+            android:theme="@style/AppTheme.CustomActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.voler.wireless.administrator.SpaceActivity" />
+        </activity>
     </application>
 
 </manifest>

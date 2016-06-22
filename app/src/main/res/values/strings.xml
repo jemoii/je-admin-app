@@ -1,18 +1,36 @@
 <resources>
     <string name="app_name">Administrator</string>
     <string name="title_activity_main">首页</string>
-    <string name="action_login">登录</string>
-    <string name="action_space">个人空间</string>
+
+    <!-- Strings related to space -->
+    <string name="action_space">个人信息</string>
+    <string name="title_activity_space">个人信息</string>
+    <string name="action_edit">编辑</string>
+    <string name="label_space_nickname">昵称：</string>
+    <string name="label_space_username">邮箱地址：</string>
+    <string name="label_space_telephone">手机号码：</string>
+    <string name="action_logout">退出登录</string>
+    <string name="tip_request_info_error">网络错误，请尝试刷新</string>
+
+    <string name="title_activity_edit">编辑个人信息</string>
+    <string name="action_edit_cancel">取消</string>
+    <string name="action_edit_submit">提交</string>
+    <string name="tip_username_editable_false">注册邮箱不可修改</string>
+    <string name="tip_phone_editable_false">手机号码暂时不可修改</string>
+
     <string name="action_qrcode">扫一扫</string>
     <string name="action_copyright">说明</string>
-    <string name="title_activity_login">登录</string>
-    <string name="title_activity_space">个人空间</string>
     <string name="title_activity_qrcode">扫一扫</string>
     <string name="title_activity_copyright">说明</string>
+    <string name="error_invalid_nickname">昵称由至少5个字母、数字组成</string>
+    <string name="error_edit_failed">编辑个人信息失败</string>
 
-    <string name="tip_choose_browswr">使用浏览器打开...</string>
+    <string name="tip_choose_browser">使用浏览器打开...</string>
 
     <!-- Strings related to login -->
+    <string name="action_login">登录</string>
+    <string name="title_activity_login">登录</string>
+
     <string name="prompt_email">邮箱</string>
     <string name="prompt_password">密码</string>
     <string name="error_invalid_email">邮箱地址不合法</string>

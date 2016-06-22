@@ -13,7 +13,7 @@ import java.io.IOException;
 public class LoginUtil {
 
     private static final String PROD_SERVER = "http://duapp.voler.me";
-    private static final String LOCAL_SERVER = "http://172.28.38.1:8080";
+    private static final String LOCAL_SERVER = "http://172.16.163.1:8080";
 
     private static final String PREFERENCE_LOGIN = "me.voler.wireless.administrator.preference.login";
     private static final String KEY_LOGIN_SUCCESS = "me.voler.wireless.administrator.key.login";
@@ -45,6 +45,15 @@ public class LoginUtil {
         }
     }
 
+    public static void logout() {
+        SharedPreferences sharedPref = CustomApplication.getContext().getSharedPreferences(PREFERENCE_LOGIN, Context.MODE_PRIVATE);
+        if (sharedPref.getString(KEY_LOGIN_SUCCESS, null) != null) {
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.remove(KEY_LOGIN_SUCCESS);
+            editor.commit();
+        }
+    }
+
     /**
      * 保存用户成功登录信息
      *
@@ -61,9 +70,17 @@ public class LoginUtil {
      * @return 用户当前是否成功登录
      */
     public static boolean checkLogin() {
+        return getLoginUsername() != null;
+    }
+
+    /**
+     * 用户未成功登录时返回{@code null}
+     *
+     * @return 用户成功登录后保存的用户名
+     */
+    public static String getLoginUsername() {
         SharedPreferences sharedPref = CustomApplication.getContext().getSharedPreferences(PREFERENCE_LOGIN, Context.MODE_PRIVATE);
-        String username = sharedPref.getString(KEY_LOGIN_SUCCESS, null);
-        return username != null;
+        return sharedPref.getString(KEY_LOGIN_SUCCESS, null);
     }
 
 }
